@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KOA XHOCK — Hockey High Performance en Happi) Arena - Pista de Hielo Cancún</title>
+  <meta name="description" content="XHOCK by KOA: bootcamp independiente de hockey de alto rendimiento para atletas de 12 a 18 años en Happi) Arena - Pista de Hielo Cancún." />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-follower" aria-hidden="true"></div>
+
+  <nav class="nav" aria-label="Navegación principal">
+    <a class="nav__brand magnetic" href="#top" aria-label="KOA XHOCK inicio">
+      <img src="assets/logos/Logo-negativo.png" alt="KOA" />
+      <span class="koa-tag">XHOCK</span>
+    </a>
+    <button class="nav__toggle magnetic" type="button" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <div class="nav__links">
+      <a href="#experiencia">Experiencia</a>
+      <a href="#metodo">Método</a>
+      <a href="#galeria">Fotos</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="btn btn--small btn--primary magnetic" href="#aplicar">Aplicar</a>
+  </nav>
+
+  <main id="top">
+    <section class="hero section-dark" id="hero" data-screen-label="Hero">
+      <canvas class="particle-canvas" data-particles="hero" aria-hidden="true"></canvas>
+      <div class="hero__noise" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <div class="badge fade-up">
+            <span class="badge__dot"></span>
+            Happi) Arena · KOA Sports · Hockey high performance
+          </div>
+          <h1 class="split-title hero__title">
+            <span class="line-wrap"><span class="line">Hockey</span></span>
+            <span class="line-wrap"><span class="line">Sin salir</span></span>
+            <span class="line-wrap"><span class="line line--accent">de México</span></span>
+          </h1>
+          <p class="hero__sub fade-up delay-1">
+            XHOCK es un bootcamp independiente de alto rendimiento para atletas de hockey de 12 a 18 años: coaching especializado, performance tracking, mentalidad competitiva, hospedaje y nutrición en un solo programa.
+          </p>
+          <div class="hero__actions fade-up delay-2">
+            <a class="btn btn--primary magnetic" href="#aplicar">
+              Inscribirme a XHOCK
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--ghost magnetic" href="https://wa.me/525579387088?text=Hola%20KOA%2C%20quiero%20informaci%C3%B3n%20de%20XHOCK" target="_blank" rel="noreferrer">
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1.5-4.5A8.5 8.5 0 1 1 20.5 11.5z"/><path d="M8.5 9.5c0 4 2.5 6 5.5 6.5"/></svg>
+              Hablar por WhatsApp
+            </a>
+          </div>
+          <div class="hero__proof fade-up delay-3" aria-label="Pruebas de confianza">
+            <span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.4"/></svg>Happi) Arena Cancún</span>
+            <span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3 2"/></svg>Cupos limitados</span>
+            <span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg>Padres informados</span>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal" data-parallax>
+          <div class="visual-card tilt-card" data-tilt>
+            <div class="visual-card__media">
+              <img src="https://images.unsplash.com/photo-1706841116914-f14c06cc920e?auto=format&fit=crop&w=1800&q=82" alt="Atleta de hockey en entrenamiento XHOCK" />
+              <div class="media-gradient"></div>
+            </div>
+            <div class="visual-card__brand">
+              <img src="assets/logos/Logo-isotipo-negativo.png" alt="KOA" />
+            </div>
+            <div class="floating-pill floating-pill--top">
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13l4-4 4 4 5-6 5 5"/><path d="M3 19h18"/></svg>
+              Performance tracking
+            </div>
+            <div class="floating-stat floating-stat--left">
+              <strong>12-18</strong>
+              <span>años</span>
+            </div>
+            <div class="floating-stat floating-stat--right">
+              <strong>2</strong>
+              <span>semanas</span>
+            </div>
+          </div>
+          <div class="hero__photo-strip" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1769437881488-be0ce0618eef?auto=format&fit=crop&w=1800&q=82" alt="" />
+            <img src="https://images.unsplash.com/photo-1706844587180-ef9a22200a85?auto=format&fit=crop&w=1800&q=82" alt="" />
+            <img src="https://images.unsplash.com/photo-1735656244034-6b2b53d2657d?auto=format&fit=crop&w=1800&q=82" alt="" />
+          </div>
+        </div>
+      </div>
+      <a class="scroll-hint" href="#experiencia" aria-label="Bajar a la siguiente sección"><span></span></a>
+    </section>
+
+    <section class="marquee-section" aria-label="Diferenciadores KOA">
+      <div class="marquee marquee--left">
+        <div class="marquee__track">
+          <span>High performance</span><span>Hockey en México</span><span>Disciplina</span><span>Nutrición</span><span>Comunidad</span><span>Seguimiento</span><span>Cancún</span><span>Atletas 12-18</span>
+          <span>High performance</span><span>Hockey en México</span><span>Disciplina</span><span>Nutrición</span><span>Comunidad</span><span>Seguimiento</span><span>Cancún</span><span>Atletas 12-18</span>
+        </div>
+      </div>
+      <div class="marquee marquee--right">
+        <div class="marquee__track">
+          <span>KOA Sports</span><span>Energía en acción</span><span>Bootcamp independiente</span><span>Padres tranquilos</span><span>Happi) Arena</span><span>Entrenamiento intensivo</span><span>KOA Sports</span><span>Energía en acción</span><span>Bootcamp independiente</span><span>Padres tranquilos</span><span>Happi) Arena</span><span>Entrenamiento intensivo</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats section-light" id="experiencia" data-screen-label="Stats">
+      <canvas class="particle-canvas particle-canvas--soft" data-particles="soft" aria-hidden="true"></canvas>
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow fade-up">XHOCK en números</p>
+          <h2 class="split-title">
+            <span class="line-wrap"><span class="line">Una experiencia diseñada</span></span>
+            <span class="line-wrap"><span class="line">para subir de nivel.</span></span>
+          </h2>
+        </div>
+        <div class="stats__grid">
+          <article class="stat-card tilt-card fade-up" data-tilt>
+            <div class="stat-card__icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><circle cx="17" cy="9" r="2.4"/><path d="M16 13.5a4.7 4.7 0 0 1 4.5 4"/></svg></div>
+            <strong class="counter" data-count="12" data-suffix="-18">0</strong>
+            <span>edad objetivo</span>
+            <p>Atletas jóvenes con base competitiva, no campamento recreativo.</p>
+          </article>
+          <article class="stat-card tilt-card fade-up delay-1" data-tilt>
+            <div class="stat-card__icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2.5"/><path d="M4 9.5h16"/><path d="M8 3v4M16 3v4"/></svg></div>
+            <strong><span class="counter" data-count="2">0</span></strong>
+            <span>semanas de inmersión</span>
+            <p>Rutina, hielo, mentalidad, hábitos y comunidad en un solo programa.</p>
+          </article>
+          <article class="stat-card tilt-card fade-up delay-2" data-tilt>
+            <div class="stat-card__icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7H8a3 3 0 0 0 0 6h8a3 3 0 0 1 0 6H4"/><path d="M12 4v3M12 19v3"/></svg></div>
+            <strong>$<span class="counter" data-count="1800">0</span></strong>
+            <span>USD por boleto</span>
+            <p>Pago seguro vía Stripe. El link real se configura en script.js.</p>
+          </article>
+          <article class="stat-card tilt-card fade-up delay-3" data-tilt>
+            <div class="stat-card__icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <strong><span class="counter" data-count="1">0</span></strong>
+            <span>sede en Cancún</span>
+            <p>Happi) Arena - Pista de Hielo Cancún como venue principal del bootcamp.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="context section-dark" id="problema" data-screen-label="Problema">
+      <div class="container context__grid">
+        <div class="context__media reveal" data-parallax-soft>
+          <img src="https://images.unsplash.com/photo-1706841116914-f14c06cc920e?auto=format&fit=crop&w=1800&q=82" alt="Atleta en pista de hockey durante entrenamiento" />
+          <div class="context__quote">
+            <span>Insight</span>
+            <strong>El talento no avanza cuando el entrenamiento llega por partes.</strong>
+          </div>
+        </div>
+        <div class="context__copy">
+          <p class="eyebrow fade-up">Problema real</p>
+          <h2 class="split-title">
+            <span class="line-wrap"><span class="line">Menos improvisación.</span></span>
+            <span class="line-wrap"><span class="line line--accent">Más estructura.</span></span>
+          </h2>
+          <p class="section-text fade-up delay-1">
+            KOA creó en México lo que antes obligaba a viajar a USA o Canadá: una inmersión premium de hockey que combina entrenamiento, mentalidad y estilo de vida con un estándar internacional.
+          </p>
+          <div class="problem-list fade-up delay-2">
+            <div>
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13L3 11l1-2 3 .5L11 5l2 .5-2 5 4 1 1.5-2.5L19 9l-1.5 4.5"/><path d="M4 19h16"/></svg>
+              <p><b>Viajes costosos</b> y logística internacional.</p>
+            </div>
+            <div>
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 6.5l11 11M6 18l3-3M15 9l3-3"/><circle cx="5" cy="19" r="1.6"/><circle cx="19" cy="5" r="1.6"/></svg>
+              <p>Academias que entrenan técnica, <b>pero no hábitos</b>.</p>
+            </div>
+            <div>
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 8h.01"/></svg>
+              <p>Padres que necesitan <b>claridad y seguimiento</b>.</p>
+            </div>
+          </div>
+          <a class="text-link magnetic fade-up delay-3" href="#metodo">Ver cómo funciona
+            <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="method section-light" id="metodo" data-screen-label="Método">
+      <div class="container method__grid">
+        <div class="method__copy">
+          <p class="eyebrow fade-up">Metodología</p>
+          <h2 class="split-title">
+            <span class="line-wrap"><span class="line">Todo el journey,</span></span>
+            <span class="line-wrap"><span class="line line--accent">sin perder control.</span></span>
+          </h2>
+          <p class="section-text fade-up delay-1">
+            El flujo de inscripción está pensado para que la familia entienda costos, sede, forma de pago y siguientes pasos antes de llegar al hielo.
+          </p>
+          <div class="steps fade-up delay-2">
+            <article class="step-card">
+              <span class="step-card__num">01</span>
+              <div class="step-card__icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v4h4"/><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M8 13h6M8 17h4"/></svg></div>
+              <div><h3>Aplicación</h3><p>Formulario claro para registrar edad, nivel, objetivo y datos de contacto.</p></div>
+            </article>
+            <article class="step-card">
+              <span class="step-card__num">02</span>
+              <div class="step-card__icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 3z"/><path d="M8 9h8M8 12h5"/></svg></div>
+              <div><h3>Pago por Stripe</h3><p>Después de enviar el formulario, el usuario se redirige al link de pago seguro.</p></div>
+            </article>
+            <article class="step-card">
+              <span class="step-card__num">03</span>
+              <div class="step-card__icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><circle cx="17" cy="9" r="2.3"/><path d="M16 13.4a4.6 4.6 0 0 1 4.5 4"/></svg></div>
+              <div><h3>Validación KOA</h3><p>El equipo confirma registro, logística, sede y requisitos del atleta.</p></div>
+            </article>
+            <article class="step-card">
+              <span class="step-card__num">04</span>
+              <div class="step-card__icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1.5-4.5A8.5 8.5 0 1 1 20.5 11.5z"/><path d="M8.5 9.5c0 4 2.5 6 5.5 6.5"/></svg></div>
+              <div><h3>Checklist final</h3><p>WhatsApp para fechas, llegada a Happi) Arena, equipamiento y preparación.</p></div>
+            </article>
+          </div>
+        </div>
+        <div class="method__visual reveal">
+          <div class="phone-card tilt-card" data-tilt>
+            <img src="https://images.unsplash.com/photo-1769437881488-be0ce0618eef?auto=format&fit=crop&w=1800&q=82" alt="Entrenamiento de hockey con atletas jóvenes" />
+            <div class="phone-card__overlay">
+              <span class="koa-mark"><i class="koa-bug"></i>KOA</span>
+              <p>Journey personalizado</p>
+            </div>
+          </div>
+          <div class="method__mini-grid">
+            <img src="https://images.unsplash.com/photo-1706844587180-ef9a22200a85?auto=format&fit=crop&w=1800&q=82" alt="Detalle de entrenamiento de hockey" />
+            <img src="https://images.unsplash.com/photo-1735656244034-6b2b53d2657d?auto=format&fit=crop&w=1800&q=82" alt="Equipo de hockey en pista" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits section-dark" id="beneficios" data-screen-label="Beneficios">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow fade-up">Propuesta de valor</p>
+          <h2 class="split-title">
+            <span class="line-wrap"><span class="line">Hockey, mente</span></span>
+            <span class="line-wrap"><span class="line line--accent">y hábitos.</span></span>
+          </h2>
+        </div>
+        <div class="bento-grid">
+          <article class="bento-card bento-card--large tilt-card fade-up" data-tilt>
+            <span class="card-kicker">01</span>
+            <h3>Preparación internacional, sin salir de México.</h3>
+            <p>Estructura, intensidad y disciplina competitiva sin el costo emocional y logístico de salir del país.</p>
+            <img src="https://images.unsplash.com/photo-1706841116914-f14c06cc920e?auto=format&fit=crop&w=1800&q=82" alt="Atleta patinando en pista" />
+          </article>
+          <article class="bento-card tilt-card fade-up delay-1" data-tilt>
+            <div class="bento-card__icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></div>
+            <h3>Desarrollo 360.</h3>
+            <p>Aquí no solo se entrena hockey: se construyen hábitos, liderazgo, disciplina y mentalidad de alto rendimiento.</p>
+          </article>
+          <article class="bento-card tilt-card fade-up delay-2" data-tilt>
+            <div class="bento-card__icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <h3>Confianza para padres.</h3>
+            <p>Comunicación clara antes del evento, sede definida y proceso de inscripción visible.</p>
+          </article>
+          <article class="bento-card bento-card--accent tilt-card fade-up delay-3" data-tilt>
+            <img class="inline-koa-logo" src="assets/logos/Logo-Positivo.png" alt="KOA" />
+            <h3>Las leyendas se sudan.</h3>
+            <p>Un ecosistema de movimiento, comunidad y alto impacto para atletas jóvenes.</p>
+          </article>
+          <article class="bento-card tilt-card fade-up delay-4" data-tilt>
+            <div class="bento-card__icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M16 7h5v5"/></svg></div>
+            <h3>Progreso medible.</h3>
+            <p>Métricas físicas para evaluar avance y sostener un camino de mejora, no un evento aislado.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner" id="manifiesto" data-screen-label="Manifiesto" aria-label="Manifiesto KOA">
+      <div class="cta-banner__media" data-parallax-bg>
+        <img src="https://images.unsplash.com/photo-1769437881488-be0ce0618eef?auto=format&fit=crop&w=1800&q=82" alt="Atleta de hockey en plena acción" />
+      </div>
+      <div class="cta-banner__overlay"></div>
+      <div class="container cta-banner__inner">
+        <p class="eyebrow fade-up">Mentalidad KOA</p>
+        <h2 class="split-title cta-banner__title">
+          <span class="line-wrap"><span class="line">Entrena como</span></span>
+          <span class="line-wrap"><span class="line line--accent">si el hielo</span></span>
+          <span class="line-wrap"><span class="line">te estuviera viendo.</span></span>
+        </h2>
+        <a class="btn btn--primary magnetic fade-up delay-2" href="#aplicar">
+          Quiero mi lugar
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="tabs-section section-light" id="tabs" data-screen-label="Casos de uso">
+      <div class="container tabs__grid">
+        <div>
+          <p class="eyebrow fade-up">Para quién es</p>
+          <h2 class="split-title">
+            <span class="line-wrap"><span class="line">Atletas listos.</span></span>
+            <span class="line-wrap"><span class="line line--accent">Padres tranquilos.</span></span>
+          </h2>
+        </div>
+        <div class="tabs reveal" data-tabs>
+          <div class="tab-buttons" role="tablist" aria-label="Casos de uso XHOCK">
+            <button class="tab-btn active" type="button" role="tab" aria-selected="true" data-tab="atleta">
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="6" r="2.6"/><path d="M7 21l2-7-2-2 5-2 5 4M9 12l-1 4M14 14l1 7"/></svg>Atleta
+            </button>
+            <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="padres">
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.2"/></svg>Padres
+            </button>
+            <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="logistica">
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="12" height="9" rx="1.5"/><path d="M15 11h4l2 3v3h-6z"/><circle cx="7" cy="18.5" r="1.8"/><circle cx="17.5" cy="18.5" r="1.8"/></svg>Logística
+            </button>
+            <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="sponsors">
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9 6.8 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg>Sponsors
+            </button>
+          </div>
+          <div class="tab-panels">
+            <article class="tab-panel active" data-panel="atleta">
+              <h3>Para quien quiere competir mejor.</h3>
+              <p>Entrenamiento intensivo, ritmo de alto desempeño y mentalidad para llegar distinto a la siguiente temporada.</p>
+              <ul><li>Disciplina diaria</li><li>Comunidad que empuja</li><li>Hockey como estilo de vida</li></ul>
+            </article>
+            <article class="tab-panel" data-panel="padres">
+              <h3>Para quien necesita confiar.</h3>
+              <p>Claridad sobre costo, sede, inscripción, supervisión y comunicación antes de tomar la decisión.</p>
+              <ul><li>Información clara</li><li>Supervisión</li><li>Seguimiento por WhatsApp</li></ul>
+            </article>
+            <article class="tab-panel" data-panel="logistica">
+              <h3>Todo en un solo programa.</h3>
+              <p>La propuesta evita que la familia resuelva entrenamiento, estancia, alimentos y orientación por separado.</p>
+              <ul><li>Hospedaje</li><li>Alimentos</li><li>Programa estructurado</li></ul>
+            </article>
+            <article class="tab-panel" data-panel="sponsors">
+              <h3>Audiencia premium, contexto premium.</h3>
+              <p>Para aliados, XHOCK abre una entrada a familias deportistas, turismo deportivo y comunidad premium de alto valor.</p>
+              <ul><li>Nicho deportivo</li><li>Experiencia aspiracional</li><li>Comunidad segmentada</li></ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery section-dark" id="galeria" data-screen-label="Galería">
+      <div class="container">
+        <div class="section-head section-head--between">
+          <div>
+            <p class="eyebrow fade-up">Galería visual</p>
+            <h2 class="split-title">
+              <span class="line-wrap"><span class="line">Hielo, velocidad</span></span>
+              <span class="line-wrap"><span class="line line--accent">y comunidad.</span></span>
+            </h2>
+          </div>
+          <p class="section-note fade-up delay-1">Fotos alusivas de hockey y entrenamiento en pista para reforzar la experiencia XHOCK.</p>
+        </div>
+        <div class="photo-grid reveal">
+          <figure class="photo-card photo-card--tall"><img loading="lazy" src="https://images.unsplash.com/photo-1706844587180-ef9a22200a85?auto=format&fit=crop&w=1800&q=82" alt="Atleta de hockey en acción" /><figcaption>Ritmo de pista</figcaption></figure>
+          <figure class="photo-card"><img loading="lazy" src="https://images.unsplash.com/photo-1735656244034-6b2b53d2657d?auto=format&fit=crop&w=1800&q=82" alt="Entrenamiento de hockey" /><figcaption>Técnica</figcaption></figure>
+          <figure class="photo-card"><img loading="lazy" src="https://images.unsplash.com/photo-1706841116914-f14c06cc920e?auto=format&fit=crop&w=1800&q=82" alt="Equipo de hockey" /><figcaption>Equipo</figcaption></figure>
+          <figure class="photo-card photo-card--wide"><img loading="lazy" src="https://images.unsplash.com/photo-1769437881488-be0ce0618eef?auto=format&fit=crop&w=1800&q=82" alt="Atletas dentro de pista de hockey" /><figcaption>Comunidad</figcaption></figure>
+          <figure class="photo-card"><img loading="lazy" src="https://images.unsplash.com/photo-1706844587180-ef9a22200a85?auto=format&fit=crop&w=1800&q=82" alt="Atleta en entrenamiento" /><figcaption>Intensidad</figcaption></figure>
+          <figure class="photo-card"><img loading="lazy" src="https://images.unsplash.com/photo-1735656244034-6b2b53d2657d?auto=format&fit=crop&w=1800&q=82" alt="Entrenamiento deportivo" /><figcaption>Focus</figcaption></figure>
+          <figure class="photo-card photo-card--tall"><img loading="lazy" src="https://images.unsplash.com/photo-1706841116914-f14c06cc920e?auto=format&fit=crop&w=1800&q=82" alt="Atleta de hockey durante práctica" /><figcaption>Performance</figcaption></figure>
+          <figure class="photo-card"><img loading="lazy" src="https://images.unsplash.com/photo-1769437881488-be0ce0618eef?auto=format&fit=crop&w=1800&q=82" alt="Atleta joven con equipo de hockey" /><figcaption>Desarrollo</figcaption></figure>
+          <figure class="photo-card"><img loading="lazy" src="https://images.unsplash.com/photo-1706844587180-ef9a22200a85?auto=format&fit=crop&w=1800&q=82" alt="Pista o experiencia KOA" /><figcaption>Venue</figcaption></figure>
+          <figure class="photo-card photo-card--wide"><img loading="lazy" src="https://images.unsplash.com/photo-1735656244034-6b2b53d2657d?auto=format&fit=crop&w=1800&q=82" alt="Experiencia deportiva premium" /><figcaption>KOA energy</figcaption></figure>
+          <figure class="photo-card"><img loading="lazy" src="https://images.unsplash.com/photo-1706841116914-f14c06cc920e?auto=format&fit=crop&w=1800&q=82" alt="Detalle de experiencia deportiva" /><figcaption>Detalles</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews section-light" id="reviews" data-screen-label="Reviews">
+      <div class="container reviews__grid">
+        <div>
+          <p class="eyebrow fade-up">Social proof</p>
+          <h2 class="split-title">
+            <span class="line-wrap"><span class="line">Confianza antes</span></span>
+            <span class="line-wrap"><span class="line line--accent">de inscripción.</span></span>
+          </h2>
+        </div>
+        <div class="reviews__cards">
+          <article class="review-card fade-up delay-1">
+            <div class="review-card__stars" aria-label="5 de 5 estrellas">
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9 6.8 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg>
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9 6.8 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg>
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9 6.8 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg>
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9 6.8 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg>
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9 6.8 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg>
+            </div>
+            <p>“Por primera vez sentimos que había una estructura seria detrás de un bootcamp. Nuestro hijo disfrutó la experiencia y nosotros entendimos todo el proceso.”</p>
+            <span>Padre / Madre de atleta · 12-18</span>
+          </article>
+          <article class="review-card fade-up delay-2">
+            <div class="review-card__stars" aria-label="5 de 5 estrellas">
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9 6.8 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg>
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9 6.8 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg>
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9 6.8 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg>
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9 6.8 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg>
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9 6.8 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg>
+            </div>
+            <p>“Me exigieron como en un ambiente de alto nivel y pude ver mi progreso con seguimiento. Sales con otra mentalidad.”</p>
+            <span>Atleta de hockey · XHOCK</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq section-dark" id="faq" data-screen-label="FAQ">
+      <div class="container faq__grid">
+        <div>
+          <p class="eyebrow fade-up">FAQ</p>
+          <h2 class="split-title">
+            <span class="line-wrap"><span class="line">Dudas antes</span></span>
+            <span class="line-wrap"><span class="line line--accent">de aplicar.</span></span>
+          </h2>
+          <p class="section-text fade-up delay-1">Respuestas claras sobre edad, costo, sede, inscripción, pago y seguimiento para familias KOA.</p>
+          <a class="btn btn--ghost magnetic fade-up delay-2" href="https://wa.me/525579387088?text=Hola%20KOA%2C%20tengo%20una%20duda%20de%20XHOCK" target="_blank" rel="noreferrer">
+            <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1.5-4.5A8.5 8.5 0 1 1 20.5 11.5z"/><path d="M8.5 9.5c0 4 2.5 6 5.5 6.5"/></svg>
+            Tengo otra duda
+          </a>
+        </div>
+        <div class="accordion reveal" data-accordion>
+          <article class="faq-item active">
+            <button type="button" aria-expanded="true"><span>¿Para quién está diseñado XHOCK?</span><i></i></button>
+            <div class="faq-panel"><p>Para atletas de hockey de 12 a 18 años que buscan desarrollo competitivo y entrenamiento de alto rendimiento.</p></div>
+          </article>
+          <article class="faq-item">
+            <button type="button" aria-expanded="false"><span>¿Es un campamento recreativo?</span><i></i></button>
+            <div class="faq-panel"><p>No. El enfoque es performance, disciplina, mentalidad, hábitos y desarrollo competitivo.</p></div>
+          </article>
+          <article class="faq-item">
+            <button type="button" aria-expanded="false"><span>¿Qué incluye el programa?</span><i></i></button>
+            <div class="faq-panel"><p>Entrenamiento, hospedaje, alimentos, seguimiento físico, coaches profesionales y experiencia integral.</p></div>
+          </article>
+          <article class="faq-item">
+            <button type="button" aria-expanded="false"><span>¿Cuánto cuesta XHOCK?</span><i></i></button>
+            <div class="faq-panel"><p>El costo de referencia del boleto es de $1,800 USD por atleta. La inscripción se completa mediante pago seguro por Stripe.</p></div>
+          </article>
+          <article class="faq-item">
+            <button type="button" aria-expanded="false"><span>¿Dónde se realiza?</span><i></i></button>
+            <div class="faq-panel"><p>En Happi) Arena - Pista de Hielo Cancún. La sede se encuentra en la zona de Go Grand Outlet Riviera Maya, Cancún.</p></div>
+          </article>
+          <article class="faq-item">
+            <button type="button" aria-expanded="false"><span>¿Los padres pueden dar seguimiento?</span><i></i></button>
+            <div class="faq-panel"><p>Sí. La comunicación y supervisión forman parte importante de la experiencia previa, durante y posterior al proceso.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="pricing section-dark" id="inscripcion" data-screen-label="Inscripción">
+      <div class="container pricing__grid">
+        <div class="pricing__copy">
+          <p class="eyebrow fade-up">Costo e inscripción</p>
+          <h2 class="split-title">
+            <span class="line-wrap"><span class="line">Tu lugar</span></span>
+            <span class="line-wrap"><span class="line line--accent">se paga por Stripe.</span></span>
+          </h2>
+          <p class="section-text fade-up delay-1">El registro se completa en tres pasos: formulario, pago seguro y confirmación por WhatsApp del equipo KOA.</p>
+        </div>
+        <div class="price-card reveal tilt-card" data-tilt>
+          <span class="price-card__label">XHOCK High-Performance Hockey Bootcamp</span>
+          <strong>$1,800 <small>USD</small></strong>
+          <p>Dos semanas de inmersión estructurada con disciplina, intensidad competitiva y seguimiento de desempeño, sin logística internacional.</p>
+          <ul>
+            <li>Happi) Arena - Pista de Hielo Cancún</li>
+            <li>Hospedaje incluido</li>
+            <li>Alimentos y nutrición</li>
+            <li>Coaches profesionales</li>
+            <li>Performance tracking</li>
+          </ul>
+          <a class="btn btn--primary magnetic" href="#aplicar">Iniciar inscripción</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="apply section-light" id="aplicar" data-screen-label="Aplicar">
+      <canvas class="particle-canvas particle-canvas--form" data-particles="form" aria-hidden="true"></canvas>
+      <div class="container apply__grid">
+        <div class="apply__copy">
+          <p class="eyebrow fade-up">Aplicación</p>
+          <h2 class="split-title">
+            <span class="line-wrap"><span class="line">Inscríbete</span></span>
+            <span class="line-wrap"><span class="line line--accent">a XHOCK.</span></span>
+          </h2>
+          <p class="section-text fade-up delay-1">Completa los datos del atleta. Al enviar, te llevaremos al link de Stripe para pagar el boleto de $1,800 USD.</p>
+          <div class="trust-box fade-up delay-2">
+            <img class="inline-koa-logo inline-koa-logo--dark" src="assets/logos/Logo-Positivo.png" alt="KOA" />
+            <p>Costo de referencia: $1,800 USD por boleto. Forma de inscripción: formulario + pago seguro por Stripe + confirmación por WhatsApp.</p>
+          </div>
+        </div>
+        <form class="lead-form reveal" id="leadForm" data-stripe-url="https://buy.stripe.com/REEMPLAZAR_LINK_DE_PAGO_XHOCK" novalidate>
+          <div class="form-row">
+            <label for="parentName">Nombre del padre/madre/tutor</label>
+            <input id="parentName" name="parentName" type="text" placeholder="Ej. Mariana López" required />
+          </div>
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="phone">WhatsApp</label>
+              <input id="phone" name="phone" type="tel" placeholder="Ej. +52 55 0000 0000" required />
+            </div>
+            <div class="form-row">
+              <label for="email">Correo</label>
+              <input id="email" name="email" type="email" placeholder="Ej. nombre@email.com" required />
+            </div>
+          </div>
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="athleteAge">Edad del atleta</label>
+              <select id="athleteAge" name="athleteAge" required>
+                <option value="">Selecciona</option>
+                <option>12-14 años</option>
+                <option>15-16 años</option>
+                <option>17-18 años</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="level">Nivel actual</label>
+              <select id="level" name="level" required>
+                <option value="">Selecciona</option>
+                <option>Competitivo inicial</option>
+                <option>Competitivo intermedio</option>
+                <option>Alto rendimiento</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="goal">¿Qué busca mejorar?</label>
+            <textarea id="goal" name="goal" rows="4" placeholder="Ej. velocidad, confianza, disciplina, técnica, mentalidad..."></textarea>
+          </div>
+          <label class="checkbox-row">
+            <input type="checkbox" required />
+            <span>Acepto ser contactado por KOA y continuar al pago seguro por Stripe para completar mi inscripción.</span>
+          </label>
+          <button class="btn btn--primary btn--full magnetic" type="submit">
+            Continuar a pago Stripe
+            <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+          </button>
+          <p class="form-note">Al enviar, tus datos se guardan localmente para la página de confirmación y se abre la liga de pago de Stripe configurada por KOA.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer section-dark">
+    <canvas class="particle-canvas particle-canvas--footer" data-particles="footer" aria-hidden="true"></canvas>
+    <div class="container footer__grid">
+      <div>
+        <a class="footer__brand" href="#top" aria-label="KOA inicio">
+          <img src="assets/logos/Logo-negativo.png" alt="KOA" />
+        </a>
+        <p>KOA crea experiencias deportivas independientes, innovadoras y de alto impacto para impulsar el crecimiento de atletas y comunidades.</p>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <a href="https://wa.me/525579387088?text=Hola%20KOA%2C%20quiero%20aplicar%20a%20XHOCK" target="_blank" rel="noreferrer">
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1.5-4.5A8.5 8.5 0 1 1 20.5 11.5z"/><path d="M8.5 9.5c0 4 2.5 6 5.5 6.5"/></svg>
+          WhatsApp
+        </a>
+        <a href="https://www.instagram.com/koa.esports_mx" target="_blank" rel="noreferrer">
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+          Instagram
+        </a>
+        <a href="https://maps.app.goo.gl/orpUMna9wDp6obvEA" target="_blank" rel="noreferrer">
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.4"/></svg>
+          Happi) Arena
+        </a>
+        <a href="#aplicar">
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+          Aplicar
+        </a>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <p class="legal-copy">KOA es una organización privada e independiente enfocada en experiencias deportivas y desarrollo de atletas. Este evento no se encuentra afiliado, avalado ni representado por federaciones nacionales o internacionales de hockey.</p>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <span>© 2026 KOA. Todos los derechos reservados.</span>
+      <a href="https://dinametra.com" target="_blank" rel="noreferrer">Desarrollado por Dinametra</a>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float magnetic" href="https://wa.me/525579387088?text=Hola%20KOA%2C%20quiero%20informaci%C3%B3n%20de%20XHOCK" target="_blank" rel="noreferrer" aria-label="Hablar por WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1.5-4.5A8.5 8.5 0 1 1 20.5 11.5z"/><path d="M8.5 9.5c0 4 2.5 6 5.5 6.5"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

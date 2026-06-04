@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>¡Gracias! · Inscripción XHOCK — KOA</title>
+  <meta name="description" content="Gracias por completar tu registro a XHOCK by KOA. Si ya pagaste por Stripe, el equipo KOA confirmará tu inscripción por WhatsApp." />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --color-primary:#ebe266;--color-secondary:#ff7f19;--color-accent:#e20613;
+      --color-dark:#050505;--color-text:#1d1d1b;--color-muted:#76705d;
+      --font-display:'Orbitron',system-ui,sans-serif;--font-ui:'Manrope',system-ui,sans-serif;
+      --ease:cubic-bezier(.2,.8,.2,1);--spring:cubic-bezier(.16,1,.3,1);
+      --container:1080px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:var(--font-ui);background:var(--color-dark);color:#fff;overflow-x:hidden;min-height:100vh}
+    body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+      background:
+        radial-gradient(circle at 12% 10%,rgba(226,6,19,.22),transparent 26%),
+        radial-gradient(circle at 84% 8%,rgba(235,226,102,.22),transparent 26%),
+        radial-gradient(circle at 60% 86%,rgba(255,127,25,.16),transparent 30%),
+        linear-gradient(180deg,#050505,#0d0d0a)}
+    body::after{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+      background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.85'/%3E%3C/svg%3E")}
+    a{color:inherit;text-decoration:none}
+    svg{display:block}
+    ::selection{background:var(--color-primary);color:#111}
+
+    .particle-canvas{position:fixed;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;opacity:.55}
+    .container{width:min(var(--container),calc(100% - 40px));margin-inline:auto;position:relative;z-index:3}
+
+    /* Icons */
+    .ic{width:1.1em;height:1.1em;flex:0 0 auto;stroke:currentColor;fill:none;stroke-width:1.85;stroke-linecap:round;stroke-linejoin:round}
+
+    /* Wordmark */
+    .koa-mark{display:inline-flex;align-items:center;gap:.36em;font-family:var(--font-display);font-weight:900;letter-spacing:-.02em;line-height:1;color:#fff;font-size:23px}
+    .koa-bug{width:.5em;height:.5em;border-radius:3px;background:linear-gradient(135deg,var(--color-primary),var(--color-secondary));box-shadow:0 0 16px rgba(235,226,102,.55);transform:rotate(45deg);animation:bugPulse 3.4s var(--ease) infinite}
+    @keyframes bugPulse{0%,100%{transform:rotate(45deg) scale(1)}50%{transform:rotate(45deg) scale(1.16)}}
+    .koa-tag{font-family:var(--font-display);font-size:.58rem;font-weight:700;letter-spacing:.3em;color:rgba(255,255,255,.5);text-transform:uppercase;border-left:1px solid rgba(255,255,255,.2);padding-left:11px}
+
+    /* Nav */
+    .nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:9999;width:min(1040px,calc(100% - 32px));height:66px;padding:0 14px 0 20px;display:flex;align-items:center;justify-content:space-between;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(5,5,5,.6);backdrop-filter:blur(20px);box-shadow:0 18px 50px rgba(0,0,0,.3)}
+    .nav__brand{display:flex;align-items:center;gap:11px}
+    .nav__back{display:inline-flex;align-items:center;gap:9px;font-weight:800;font-size:.86rem;color:rgba(255,255,255,.78);padding:11px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);transition:.25s var(--ease)}
+    .nav__back:hover{color:var(--color-primary);border-color:rgba(235,226,102,.4);transform:translateY(-2px)}
+    .nav__back .ic{width:16px;height:16px}
+    @media (max-width:480px){.koa-tag{display:none}.nav__back span{display:none}}
+
+    /* Hero */
+    .grx{padding:150px 0 70px;text-align:center;position:relative}
+    .badge{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(235,226,102,.24);background:rgba(235,226,102,.08);border-radius:999px;padding:10px 16px;font-size:.78rem;font-weight:900;color:var(--color-primary);text-transform:uppercase;letter-spacing:.14em;margin-bottom:30px}
+    .badge .ic{width:15px;height:15px}
+
+    /* Animated check */
+    .check-ring{width:130px;height:130px;margin:0 auto 36px;position:relative;display:grid;place-items:center}
+    .check-ring__glow{position:absolute;inset:-18px;border-radius:50%;background:radial-gradient(circle,rgba(235,226,102,.4),transparent 65%);filter:blur(10px);animation:glowPulse 2.6s var(--ease) infinite}
+    @keyframes glowPulse{0%,100%{opacity:.6;transform:scale(.92)}50%{opacity:1;transform:scale(1.06)}}
+    .check-ring svg{width:130px;height:130px;position:relative;z-index:2;overflow:visible}
+    .check-ring__circle{stroke:var(--color-primary);stroke-width:5;fill:none;stroke-dasharray:364;stroke-dashoffset:364;animation:drawRing 1s var(--ease) .15s forwards}
+    .check-ring__tick{stroke:var(--color-primary);stroke-width:7;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:60;stroke-dashoffset:60;animation:drawTick .5s var(--ease) .95s forwards}
+    @keyframes drawRing{to{stroke-dashoffset:0}}
+    @keyframes drawTick{to{stroke-dashoffset:0}}
+    .check-ring.is-drawn .check-ring__circle,.check-ring.is-drawn .check-ring__tick{animation:none;stroke-dashoffset:0}
+
+    h1{font-family:var(--font-display);font-weight:900;text-transform:uppercase;letter-spacing:-.06em;line-height:.98;margin:0 0 22px;font-size:clamp(2.8rem,8vw,6rem)}
+    h1 .accent{color:var(--color-primary)}
+    .grx__sub{max-width:600px;margin:0 auto;font-size:clamp(1.05rem,1.6vw,1.25rem);line-height:1.7;color:rgba(255,255,255,.74)}
+    .grx__name{color:var(--color-primary);font-weight:800}
+    .grx__actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:38px}
+
+    .btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 26px;border-radius:999px;font-weight:900;letter-spacing:-.02em;transition:transform .35s var(--spring),box-shadow .35s var(--ease),background .35s var(--ease);cursor:pointer}
+    .btn .ic{width:18px;height:18px;transition:transform .35s var(--spring)}
+    .btn:hover{transform:translateY(-4px)}
+    .btn:hover .ic{transform:translateX(4px)}
+    .btn--primary{background:linear-gradient(135deg,var(--color-primary),#fff38b);color:#111;box-shadow:0 18px 46px rgba(235,226,102,.28)}
+    .btn--primary:hover{box-shadow:0 24px 70px rgba(235,226,102,.44)}
+    .btn--ghost{color:#fff;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06)}
+    .btn--ghost:hover{background:rgba(255,255,255,.12);border-color:rgba(235,226,102,.5)}
+
+    /* Marquee */
+    .marquee{margin-top:64px;overflow:hidden;border-block:1px solid rgba(255,255,255,.1);padding:14px 0;position:relative;z-index:3}
+    .marquee__track{display:flex;gap:20px;width:max-content;animation:marquee 26s linear infinite}
+    .marquee span{font-family:var(--font-display);font-size:clamp(1rem,1.7vw,1.6rem);text-transform:uppercase;font-weight:900;letter-spacing:-.04em;padding:0 20px;color:rgba(255,255,255,.8)}
+    .marquee span:nth-child(3n){color:var(--color-primary)}
+    @keyframes marquee{to{transform:translateX(-50%)}}
+
+    /* Steps */
+    .steps-section{padding:84px 0 40px}
+    .section-head{text-align:center;max-width:620px;margin:0 auto 48px}
+    .eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.74rem;font-weight:900;color:var(--color-primary);margin:0 0 16px}
+    .section-head h2{font-family:var(--font-display);font-weight:900;text-transform:uppercase;letter-spacing:-.05em;line-height:1;font-size:clamp(2rem,4.5vw,3.4rem);margin:0}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .step{position:relative;padding:28px 24px;border-radius:24px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);transition:transform .35s var(--spring),background .35s var(--ease),border-color .35s var(--ease)}
+    .step:hover{transform:translateY(-8px);background:rgba(255,255,255,.08);border-color:rgba(235,226,102,.3)}
+    .step::before{content:"";position:absolute;left:0;top:24px;bottom:24px;width:3px;border-radius:99px;background:linear-gradient(180deg,var(--color-primary),var(--color-secondary));opacity:0;transition:opacity .35s var(--ease)}
+    .step:hover::before{opacity:1}
+    .step__icon{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;margin-bottom:20px;background:rgba(235,226,102,.12);border:1px solid rgba(235,226,102,.24);color:var(--color-primary);transition:transform .35s var(--spring)}
+    .step:hover .step__icon{transform:rotate(-4deg) scale(1.08)}
+    .step__icon .ic{width:25px;height:25px}
+    .step__num{position:absolute;top:22px;right:24px;font-family:var(--font-display);font-weight:900;font-size:.8rem;color:rgba(255,255,255,.28)}
+    .step h3{margin:0 0 8px;font-size:1.12rem;letter-spacing:-.03em}
+    .step p{margin:0;color:rgba(255,255,255,.6);line-height:1.55;font-size:.92rem}
+
+    /* Reassurance strip */
+    .strip{padding:50px 0 30px}
+    .strip__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .strip__card{display:flex;align-items:center;gap:14px;padding:20px 22px;border-radius:20px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1)}
+    .strip__card .ic{width:26px;height:26px;color:var(--color-secondary)}
+    .strip__card strong{display:block;font-size:1rem;letter-spacing:-.02em}
+    .strip__card span{font-size:.84rem;color:rgba(255,255,255,.6)}
+
+    /* WhatsApp CTA */
+    .wa-cta{padding:60px 0 90px}
+    .wa-cta__card{position:relative;overflow:hidden;border-radius:34px;padding:54px;text-align:center;background:linear-gradient(135deg,rgba(235,226,102,.14),rgba(255,127,25,.08));border:1px solid rgba(235,226,102,.24)}
+    .wa-cta__card::after{content:"";position:absolute;width:380px;height:380px;border-radius:50%;right:-120px;top:-150px;background:radial-gradient(circle,rgba(235,226,102,.2),transparent 65%)}
+    .wa-cta__card h2{font-family:var(--font-display);font-weight:900;text-transform:uppercase;letter-spacing:-.05em;line-height:1;font-size:clamp(2rem,5vw,3.6rem);margin:0 0 16px;position:relative;z-index:2}
+    .wa-cta__card p{max-width:520px;margin:0 auto 30px;color:rgba(255,255,255,.74);line-height:1.65;position:relative;z-index:2}
+
+    /* Footer */
+    .footer{padding:46px 0 40px;border-top:1px solid rgba(255,255,255,.1)}
+    .footer__grid{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .footer p{margin:0;color:rgba(255,255,255,.5);font-size:.84rem}
+    .footer__links{display:flex;gap:20px}
+    .footer__links a{display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.72);font-weight:800;font-size:.88rem;transition:.25s var(--ease)}
+    .footer__links a:hover{color:var(--color-primary)}
+    .footer__links .ic{width:16px;height:16px}
+
+    .whatsapp-float{position:fixed;right:20px;bottom:20px;z-index:9999;width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--color-primary),#fff4a0);box-shadow:0 18px 50px rgba(235,226,102,.34);animation:pulse 2s ease-in-out infinite}
+    .whatsapp-float svg{width:28px;height:28px;stroke:#111;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+    .whatsapp-float::before{content:"";position:absolute;inset:-8px;border-radius:inherit;border:1px solid rgba(235,226,102,.44);animation:pulseRing 2s ease-in-out infinite}
+    @keyframes pulse{50%{transform:translateY(-4px)}}
+    @keyframes pulseRing{0%{transform:scale(.85);opacity:.7}100%{transform:scale(1.3);opacity:0}}
+
+    /* Reveal */
+    .reveal{opacity:0;transform:translateY(28px);filter:blur(8px);transition:opacity .9s var(--ease),transform .9s var(--spring),filter .9s var(--ease)}
+    .reveal.is-visible{opacity:1;transform:none;filter:none}
+    .is-settled{transition:none!important}
+    .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+    @media (max-width:900px){
+      .steps{grid-template-columns:repeat(2,1fr)}
+      .strip__grid{grid-template-columns:1fr}
+    }
+    @media (max-width:560px){
+      .grx{padding-top:120px}
+      .steps{grid-template-columns:1fr}
+      .wa-cta__card{padding:34px 24px}
+      .grx__actions .btn{width:100%}
+    }
+    @media (prefers-reduced-motion: reduce){
+      *,*::before,*::after{animation:none!important;transition:none!important}
+      .reveal{opacity:1!important;transform:none!important;filter:none!important}
+      .check-ring__circle,.check-ring__tick{stroke-dashoffset:0!important}
+    }
+  </style>
+</head>
+<body>
+  <canvas class="particle-canvas" aria-hidden="true"></canvas>
+
+  <nav class="nav">
+    <a class="nav__brand" href="index.html" aria-label="KOA XHOCK inicio">
+      <img src="assets/logos/Logo-negativo.png" alt="KOA" style="width:120px;height:auto;object-fit:contain" />
+      <span class="koa-tag">XHOCK</span>
+    </a>
+    <a class="nav__back" href="index.html">
+      <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5"/><path d="M11 6l-6 6 6 6"/></svg>
+      <span>Volver al inicio</span>
+    </a>
+  </nav>
+
+  <header class="grx">
+    <div class="container">
+      <div class="check-ring">
+        <div class="check-ring__glow"></div>
+        <svg viewBox="0 0 130 130" aria-hidden="true">
+          <circle class="check-ring__circle" cx="65" cy="65" r="58"/>
+          <path class="check-ring__tick" d="M42 67l16 16 30-34"/>
+        </svg>
+      </div>
+      <div class="badge reveal"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Registro iniciado</div>
+      <h1 class="reveal d1">¡Estás <span class="accent">dentro</span><br />del proceso!</h1>
+      <p class="grx__sub reveal d2" id="greeting">Gracias por aplicar a XHOCK. Si ya completaste el pago por Stripe, el equipo KOA te contactará por WhatsApp para confirmar inscripción, sede, checklist y siguientes pasos.</p>
+      <div class="grx__actions reveal d3">
+        <a class="btn btn--primary" href="https://wa.me/525579387088?text=Hola%20KOA%2C%20ya%20llen%C3%A9%20mi%20aplicaci%C3%B3n%20XHOCK%20y%20quiero%20continuar" target="_blank" rel="noreferrer">
+          Confirmar por WhatsApp
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1.5-4.5A8.5 8.5 0 1 1 20.5 11.5z"/><path d="M8.5 9.5c0 4 2.5 6 5.5 6.5"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="index.html#galeria">Ver la experiencia</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Registro iniciado</span><span>High performance</span><span>Happi) Arena</span><span>Las leyendas se sudan</span><span>Cancún</span><span>Atletas 12-18</span>
+      <span>Registro iniciado</span><span>High performance</span><span>Happi) Arena</span><span>Las leyendas se sudan</span><span>Cancún</span><span>Atletas 12-18</span>
+    </div>
+  </div>
+
+  <section class="steps-section">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Qué sigue</p>
+        <h2>Tus siguientes pasos</h2>
+      </div>
+      <div class="steps">
+        <article class="step reveal">
+          <span class="step__num">01</span>
+          <div class="step__icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/><path d="M21 21l-5-5"/></svg></div>
+          <h3>Revisamos tu perfil</h3>
+          <p>Validamos edad, nivel, objetivo del atleta y confirmación de pago para cerrar la inscripción.</p>
+        </article>
+        <article class="step reveal d1">
+          <span class="step__num">02</span>
+          <div class="step__icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1.5-4.5A8.5 8.5 0 1 1 20.5 11.5z"/><path d="M8.5 9.5c0 4 2.5 6 5.5 6.5"/></svg></div>
+          <h3>Te contactamos</h3>
+          <p>En 3 a 7 días recibes un mensaje por WhatsApp con toda la información clara.</p>
+        </article>
+        <article class="step reveal d2">
+          <span class="step__num">03</span>
+          <div class="step__icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><circle cx="17" cy="9" r="2.3"/><path d="M16 13.4a4.6 4.6 0 0 1 4.5 4"/></svg></div>
+          <h3>Meet the team</h3>
+          <p>Conoces a los coaches, la logística, la seguridad y las expectativas del bootcamp.</p>
+        </article>
+        <article class="step reveal d3">
+          <span class="step__num">04</span>
+          <div class="step__icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9 6.8 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg></div>
+          <h3>Aseguras tu lugar</h3>
+          <p>Confirmas pago y entras al journey de orientación hasta el día de llegada.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="strip">
+    <div class="container strip__grid">
+      <div class="strip__card reveal">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.4"/></svg>
+        <div><strong>Happi Arena Cancún</strong><span>Sede oficial del bootcamp</span></div>
+      </div>
+      <div class="strip__card reveal d1">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13l4-4 4 4 5-6 5 5"/><path d="M3 19h18"/></svg>
+        <div><strong>Performance tracking</strong><span>Progreso medible, no sensaciones</span></div>
+      </div>
+      <div class="strip__card reveal d2">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg>
+        <div><strong>Cobertura 360</strong><span>Seguridad física y emocional</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wa-cta">
+    <div class="container">
+      <div class="wa-cta__card reveal">
+        <h2>¿Tienes prisa por arrancar?</h2>
+        <p>Adelántate al follow-up. Escríbenos por WhatsApp y resolvemos en vivo cualquier duda de fechas, pagos o logística.</p>
+        <a class="btn btn--primary" href="https://wa.me/525579387088?text=Hola%20KOA%2C%20acabo%20de%20aplicar%20a%20XHOCK%20y%20quiero%20avanzar" target="_blank" rel="noreferrer" style="position:relative;z-index:2">
+          Escribir ahora
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1.5-4.5A8.5 8.5 0 1 1 20.5 11.5z"/><path d="M8.5 9.5c0 4 2.5 6 5.5 6.5"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <img src="assets/logos/Logo-negativo.png" alt="KOA" style="width:120px;height:auto;object-fit:contain" />
+      <div class="footer__links">
+        <a href="https://wa.me/525579387088" target="_blank" rel="noreferrer"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1.5-4.5A8.5 8.5 0 1 1 20.5 11.5z"/><path d="M8.5 9.5c0 4 2.5 6 5.5 6.5"/></svg>WhatsApp</a>
+        <a href="https://www.instagram.com/koa.esports_mx" target="_blank" rel="noreferrer"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>Instagram</a>
+        <a href="index.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v9h14v-9"/></svg>Inicio</a>
+      </div>
+      <p>© 2026 KOA. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/525579387088?text=Hola%20KOA%2C%20quiero%20continuar%20mi%20aplicaci%C3%B3n%20XHOCK" target="_blank" rel="noreferrer" aria-label="Hablar por WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1.5-4.5A8.5 8.5 0 1 1 20.5 11.5z"/><path d="M8.5 9.5c0 4 2.5 6 5.5 6.5"/></svg>
+  </a>
+
+  <script>
+    (function(){
+      'use strict';
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Personalized greeting from lead data
+      try{
+        var raw = sessionStorage.getItem('koa-xhock-lead');
+        if(raw){
+          var lead = JSON.parse(raw);
+          var name = (lead.parentName||'').trim().split(' ')[0];
+          if(name){
+            var g = document.getElementById('greeting');
+            g.innerHTML = '<span class="grx__name">'+name+'</span>, gracias por aplicar a XHOCK. Si ya completaste el pago por Stripe, el equipo KOA te contactará por WhatsApp para confirmar inscripción, sede, checklist y siguientes pasos.';
+          }
+        }
+      }catch(e){}
+
+      // Lock the check-mark in its drawn state after the entrance (renders in any context)
+      setTimeout(function(){ var c=document.querySelector('.check-ring'); if(c) c.classList.add('is-drawn'); }, 1500);
+
+      // Reveal
+      var els = [].slice.call(document.querySelectorAll('.reveal'));
+      function reveal(){
+        var vh = window.innerHeight;
+        els.forEach(function(el){
+          if(el.classList.contains('is-visible')) return;
+          var r = el.getBoundingClientRect();
+          if(r.top < vh*0.92 && r.bottom > -40){
+            el.classList.add('is-visible');
+            setTimeout(function(){ el.classList.add('is-settled'); }, 1000);
+          }
+        });
+      }
+      window.addEventListener('scroll', reveal, {passive:true});
+      window.addEventListener('resize', reveal);
+      reveal(); requestAnimationFrame(reveal);
+      window.addEventListener('load', function(){ reveal(); setTimeout(reveal,250); });
+
+      // Particles
+      var canvas = document.querySelector('.particle-canvas');
+      if(canvas && !reduceMotion){
+        var ctx = canvas.getContext('2d');
+        var colors = ['rgba(235,226,102,.7)','rgba(255,127,25,.5)','rgba(226,6,19,.4)','rgba(255,255,255,.3)'];
+        var dpr = Math.min(window.devicePixelRatio||1,2), W=0,H=0, parts=[];
+        function resize(){
+          W = window.innerWidth; H = window.innerHeight;
+          canvas.width = Math.floor(W*dpr); canvas.height = Math.floor(H*dpr);
+          ctx.setTransform(dpr,0,0,dpr,0,0);
+          var count = Math.round(60*Math.min(W/1200,1.4));
+          parts = Array.from({length:count}, function(){
+            return {x:Math.random()*W,y:Math.random()*H,r:Math.random()*2.2+0.6,
+              vx:(Math.random()-0.5)*0.24,vy:(Math.random()-0.5)*0.24,
+              c:colors[Math.floor(Math.random()*colors.length)], line:Math.random()>0.72};
+          });
+        }
+        function draw(){
+          ctx.clearRect(0,0,W,H);
+          for(var i=0;i<parts.length;i++){
+            var p=parts[i]; p.x+=p.vx; p.y+=p.vy;
+            if(p.x<-12)p.x=W+12; if(p.x>W+12)p.x=-12; if(p.y<-12)p.y=H+12; if(p.y>H+12)p.y=-12;
+            ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fillStyle=p.c; ctx.fill();
+            if(p.line){
+              for(var j=i+1;j<parts.length;j++){
+                var q=parts[j], dx=p.x-q.x, dy=p.y-q.y, d=Math.sqrt(dx*dx+dy*dy);
+                if(d<120){ ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(q.x,q.y);
+                  ctx.strokeStyle='rgba(235,226,102,'+(0.07*(1-d/120))+')'; ctx.lineWidth=1; ctx.stroke(); }
+              }
+            }
+          }
+          requestAnimationFrame(draw);
+        }
+        resize(); draw(); window.addEventListener('resize', resize);
+      }
+    })();
+  </script>
+</body>
+</html>
