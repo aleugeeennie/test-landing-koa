@@ -100,8 +100,8 @@
       cursorDot.style.transform = `translate(${mouse.x}px, ${mouse.y}px) translate(-50%, -50%)`;
     });
     function animateCursor() {
-      follower.x = lerp(follower.x, mouse.x, 0.16);
-      follower.y = lerp(follower.y, mouse.y, 0.16);
+      follower.x = lerp(follower.x, mouse.x, 0.38);
+      follower.y = lerp(follower.y, mouse.y, 0.38);
       cursorFollower.style.transform = `translate(${follower.x}px, ${follower.y}px) translate(-50%, -50%)`;
       requestAnimationFrame(animateCursor);
     }
@@ -264,19 +264,71 @@
     if (img.complete && img.naturalWidth === 0) applyImageFallback(img);
   });
 
-  /* ---------- Lead form → gracias.html ---------- */
-  const form = document.getElementById('leadForm');
-  if (form) {
-    form.addEventListener('submit', event => {
+  /* ---------- Ticket modal (opens on CTA click, and once on reaching page bottom) ---------- */
+  const ticketModal = document.getElementById('ticketModal');
+  const ticketForm = document.getElementById('ticketForm');
+  let lastFocused = null;
+
+  function openTicketModal(ticketType) {
+    if (!ticketModal) return;
+    if (ticketType && ticketForm) {
+      const radio = ticketForm.querySelector(`input[name="ticketType"][value="${ticketType}"]`);
+      if (radio) radio.checked = true;
+    }
+    lastFocused = document.activeElement;
+    ticketModal.classList.add('is-open');
+    ticketModal.setAttribute('aria-hidden', 'false');
+    body.classList.add('modal-open');
+    const firstField = ticketForm ? ticketForm.querySelector('input, select') : null;
+    if (firstField) setTimeout(() => firstField.focus(), 60);
+  }
+
+  function closeTicketModal() {
+    if (!ticketModal) return;
+    ticketModal.classList.remove('is-open');
+    ticketModal.setAttribute('aria-hidden', 'true');
+    body.classList.remove('modal-open');
+    if (lastFocused) lastFocused.focus();
+  }
+
+  document.querySelectorAll('.js-open-ticket-modal').forEach(trigger => {
+    trigger.addEventListener('click', () => openTicketModal(trigger.dataset.ticketType));
+  });
+
+  if (ticketModal) {
+    ticketModal.querySelectorAll('[data-modal-close]').forEach(el => {
+      el.addEventListener('click', closeTicketModal);
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && ticketModal.classList.contains('is-open')) closeTicketModal();
+    });
+  }
+
+  // Auto-open once per session when the visitor reaches the bottom of the page
+  let bottomModalShown = false;
+  try { bottomModalShown = sessionStorage.getItem('koa-xhock-bottom-modal-shown') === 'true'; } catch (error) { /* privacy mode */ }
+  window.addEventListener('scroll', () => {
+    if (bottomModalShown || !ticketModal) return;
+    const scrolledToBottom = window.innerHeight + window.scrollY >= doc.scrollHeight - 40;
+    if (scrolledToBottom) {
+      bottomModalShown = true;
+      try { sessionStorage.setItem('koa-xhock-bottom-modal-shown', 'true'); } catch (error) { /* privacy mode */ }
+      if (!ticketModal.classList.contains('is-open')) openTicketModal();
+    }
+  }, { passive: true });
+
+  /* ---------- Ticket form → gracias.html ---------- */
+  if (ticketForm) {
+    ticketForm.addEventListener('submit', event => {
       event.preventDefault();
-      if (!form.checkValidity()) { form.reportValidity(); return; }
-      const payload = Object.fromEntries(new FormData(form).entries());
+      if (!ticketForm.checkValidity()) { ticketForm.reportValidity(); return; }
+      const payload = Object.fromEntries(new FormData(ticketForm).entries());
       try {
         sessionStorage.setItem('koa-xhock-lead', JSON.stringify({ ...payload, date: new Date().toISOString() }));
       } catch (error) { /* privacy mode */ }
-      const submit = form.querySelector('button[type="submit"]');
+      const submit = ticketForm.querySelector('button[type="submit"]');
       if (submit) { submit.classList.add('is-loading'); submit.disabled = true; }
-      const stripeUrl = form.dataset.stripeUrl || window.KOA_STRIPE_PAYMENT_LINK || '';
+      const stripeUrl = ticketForm.dataset.stripeUrl || window.KOA_STRIPE_PAYMENT_LINK || '';
       setTimeout(() => {
         if (stripeUrl && !stripeUrl.includes('REEMPLAZAR_LINK_DE_PAGO_XHOCK')) {
           window.location.href = stripeUrl;
